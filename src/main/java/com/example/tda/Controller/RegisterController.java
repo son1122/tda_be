@@ -36,6 +36,16 @@ public class RegisterController {
 
     }
 
+    @GetMapping("/agent/profile")
+    public ResponseEntity<Agent> profile(@RequestParam Integer id){
+
+        Agent agent = agentRepository.findById(id).get();
+
+        return new ResponseEntity<>(agent,HttpStatus.OK);
+    }
+
+
+
 
 
 }
