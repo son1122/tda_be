@@ -1,4 +1,7 @@
 package com.example.tda.repository;
 
-public interface PackageRepository extends org.springframework.data.jpa.repository.JpaRepository<com.example.tda.entity.Package, java.lang.Integer> {
+import com.example.tda.entity.Package;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PackageRepository extends JpaRepository<Package, Integer> {
 }
